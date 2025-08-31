@@ -17,6 +17,7 @@ docker build -t incendios-forestales .
 docker run -d --name incendios-forestales \
   -p 8787:8787 \
   -v ~/incendios-forestales/git:/home/rstudio \
+  -e PASSWORD=incendios \
   --env-file ./incendios-forestales.env \
   incendios-forestales
 ```
